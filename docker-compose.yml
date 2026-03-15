@@ -1,0 +1,10 @@
+﻿services:
+  citypulse:
+    build: .
+    container_name: citypulse_api
+    ports:
+      - "8000:8000"
+    environment:
+      CITYPULSE_SEED: "42"
+      CITYPULSE_HISTORY_HOURS: "72"
+    restart: unless-stopped

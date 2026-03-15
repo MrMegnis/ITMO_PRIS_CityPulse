@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CityPulse Dashboard</title>
+    <link rel="stylesheet" href="/ui-static/styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape shape-a"></div>
+    <div class="bg-shape shape-b"></div>
+
+    <main class="layout">
+      <header class="topbar card">
+        <div>
+          <p class="eyebrow">Операционный центр</p>
+          <h1>CityPulse Dashboard</h1>
+        </div>
+        <div class="refresh-box">
+          <span id="last-update">обновление...</span>
+          <button id="refresh-btn">Обновить</button>
+        </div>
+      </header>
+
+      <section class="kpi-grid">
+        <article class="card kpi">
+          <p>Индекс города</p>
+          <h2 id="city-index">--</h2>
+          <span id="city-status" class="badge">--</span>
+        </article>
+        <article class="card kpi">
+          <p>Открытые инциденты</p>
+          <h2 id="open-incidents">--</h2>
+        </article>
+        <article class="card kpi">
+          <p>Критические инциденты</p>
+          <h2 id="critical-incidents">--</h2>
+        </article>
+        <article class="card kpi">
+          <p>Средний индекс (12ч)</p>
+          <h2 id="avg-index">--</h2>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <article class="card">
+          <h3>Тренды KPI</h3>
+          <div id="trends" class="trend-list"></div>
+        </article>
+
+        <article class="card">
+          <h3>Топ рисков</h3>
+          <ul id="risks" class="list"></ul>
+        </article>
+
+        <article class="card">
+          <h3>События в реальном времени</h3>
+          <p class="meta-line">Показываются только свежие события (автоочистка).</p>
+          <div id="events" class="events-list"></div>
+        </article>
+
+        <article class="card span-2">
+          <h3>Открытые инциденты</h3>
+          <div id="incidents" class="incidents-list"></div>
+        </article>
+
+        <article class="card span-2">
+          <h3>Рекомендации по инцидентам</h3>
+          <div id="recommendations" class="rec-list"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="/ui-static/app.js"></script>
+  </body>
+</html>
